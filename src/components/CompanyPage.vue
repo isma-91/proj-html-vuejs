@@ -1,5 +1,6 @@
 <template>
 <div class="company">
+
   <div class="services-outer">
     <div class="container">
       <div class="intros">our business areas</div>
@@ -13,6 +14,10 @@
       </div>
     </div>
 
+    <div class="card-container">
+      <ServiceCardPage />
+    </div>
+
   </div>
   <div class="about-network">
 
@@ -21,8 +26,13 @@
 </template>
 
 <script>
+import ServiceCardPage from '@/components/ServicesCardPage.vue';
+
 export default {
   name: 'CompanyName',
+  components: {
+    ServiceCardPage,
+  },
 };
 </script>
 

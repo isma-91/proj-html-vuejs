@@ -25,6 +25,11 @@
           <button class="btn btn-green">get in touch</button>
           <button class="btn btn-white">read more</button>
         </div>
+        <div class="selectors">
+          <div class="circle"></div>
+          <div class="circle full"></div>
+          <div class="circle"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -94,6 +99,25 @@ li:last-child a {
 
   display: flex;
   flex-direction: column;
+
+  position: relative;
+}
+.selectors{
+  position:absolute;
+  right: 30px;
+  top: 50%;
+}
+.circle {
+  height: 20px;
+  width: 10px;
+  border: 1px solid $primary-color;
+  border-radius: 40px;
+
+  cursor: pointer;
+}
+
+.circle.full {
+  background-color: $primary-color;
 }
 
 // Stili per il div centrale
