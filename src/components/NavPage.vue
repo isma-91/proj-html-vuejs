@@ -61,6 +61,7 @@ GENERALI
     }
 }
 
+// Nav bar styles
 .nav-menu ul {
   display: flex;
 }
@@ -74,12 +75,14 @@ a {
   padding: .5rem;
 }
 
+// Ultimo figlio diverso con padding e colore... ma è un bottone??
 li:last-child a {
   color: white;
   background-color: #058283;
   border-radius: 5px;
 }
 
+// Mettiamo la background image
 .header-bottom {
   background-image: url('@/assets/img/bg-parallax.png');
   background-position: center;
@@ -92,6 +95,7 @@ li:last-child a {
   flex-direction: column;
 }
 
+// Stili per il div centrale
 .introduction {
   display: flex;
   flex-direction: column;
@@ -125,8 +129,5 @@ li:last-child a {
       gap: 1rem;
     }
 }
-// .page-details p {
-//   width: 50%;
-// }
 
 </style>
