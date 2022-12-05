@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables.scss';
 /* -------------------
 GENERALI
 ---------------------*/
@@ -77,8 +78,8 @@ a {
 
 // Ultimo figlio diverso con padding e colore... ma è un bottone??
 li:last-child a {
-  color: white;
-  background-color: #058283;
+  color: $secondary-color;
+  background-color: $primary-color;
   border-radius: 5px;
 }
 
@@ -112,8 +113,8 @@ li:last-child a {
     h1 {
       font-size: 60px;
       .green {
-        background-color: rgba($color: #058283, $alpha: .3);
-        color: #058283;
+        background-color: rgba($color: $primary-color, $alpha: .3);
+        color: $primary-color;
 
         padding: .1rem .8rem;
         border-radius: 5px;
@@ -121,6 +122,7 @@ li:last-child a {
     }
     p {
       margin: 1.5rem 0;
+      color: $primary-text-color;
     }
     .buttons{
       display: flex;

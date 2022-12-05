@@ -49,9 +49,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables.scss';
 .top-bar {
   background-color: #21333E;
-  height: 35px;
+  height: 45px;
 }
 
 .container {

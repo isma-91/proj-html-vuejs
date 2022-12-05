@@ -26,7 +26,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import '@/assets/variables.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -52,24 +54,24 @@ a {
 .btn {
   text-transform: uppercase;
   border: 0;
-  padding: .8rem;
+  padding: .6rem 1.2rem;
   border-radius: 5px;
-  border: 1px solid #058283;
+  border: 1px solid $primary-color;
 }
 
 .btn:hover{
-  background-color: #52bbba;
-  color: white;
+  background-color: $primary-hover-color;
+  color: $secondary-color;
 }
 
 .btn-green {
-  background-color: #058283;
-  color: white;
+  background-color: $primary-color;
+  color: $secondary-color;
 }
 
 .btn-white {
-  background-color: white;
-  color: #058283;
+  background-color: $secondary-color;
+  color: $primary-color;
 }
 
 button:hover {
