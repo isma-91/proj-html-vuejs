@@ -93,9 +93,7 @@ li:last-child a {
   background-image: url('@/assets/img/bg-parallax.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 150%; // TODO: Vedere come sistemare il background-size
-
-  height: 830px;
+  background-size: 3800px; // TODO: Vedere come sistemare il background-size
 
   display: flex;
   flex-direction: column;
@@ -127,6 +125,8 @@ li:last-child a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  padding: 300px;
 
   text-align: center;
   height: 100%;

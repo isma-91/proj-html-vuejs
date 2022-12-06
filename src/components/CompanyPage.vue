@@ -207,17 +207,16 @@ h2 {
 .left-side {
   width: 50%;
 
-  padding: 9rem 1.5rem 9rem 0;
+  padding: 8rem 1.5rem 8rem 0;
 
     h2{
-      font-size: 60px;
       margin: 2rem 0;
     }
 }
 
 .left-side p {
   color: $primary-text-color;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .company-cards-container {
@@ -226,7 +225,7 @@ h2 {
   column-gap: 2rem;
   row-gap: 5rem;
   padding: 5rem 0;
-  font-size: 20px;
+
 }
 
 .company-cards {
