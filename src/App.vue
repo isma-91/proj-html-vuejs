@@ -2,7 +2,11 @@
   <div>
     <HeaderPage />
     <MainPage />
-    <FooterPage />
+    <FooterPage
+      :arrFooterAbout="arrFooterAbout"
+      :arrFooterServices="arrFooterServices"
+      :arrFooterSupport="arrFooterSupport"
+    />
   </div>
 </template>
 
@@ -20,7 +24,84 @@ export default {
   },
   data() {
     return {
-
+      arrFooterAbout: [
+        {
+          icon: 'fa-angle-right',
+          text: 'The Company',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Institutuinal',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Social & Events',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Innovation',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Environment',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Technology',
+        },
+      ],
+      arrFooterServices: [
+        {
+          icon: 'fa-angle-right',
+          text: 'Audit & Assurance',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Financial Advisory',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Analytics M&A',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Middle Marketing',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Legal Consulting',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Regulatory Risk',
+        },
+      ],
+      arrFooterSupport: [
+        {
+          icon: 'fa-angle-right',
+          text: 'Responsibility',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Terms of Use',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'About Cookies',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Privacy Policy',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Accessibility',
+        },
+        {
+          icon: 'fa-angle-right',
+          text: 'Information',
+        },
+      ],
     };
   },
 };
