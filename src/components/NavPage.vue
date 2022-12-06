@@ -106,6 +106,7 @@ li:last-child a {
   position:absolute;
   right: 30px;
   top: 50%;
+  transform: translateY(-50%); // Per centrarlo effettivamente verticalmente
 }
 .circle {
   height: 20px;
@@ -132,7 +133,7 @@ li:last-child a {
 }
 
 .page-details {
-  max-width: 350px;
+  max-width: 450px;
 
     h1 {
       font-size: 60px;

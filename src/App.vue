@@ -28,11 +28,16 @@ export default {
 
 <style lang="scss">
 @import '@/assets/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: 'Alexandria', sans-serif;
 }
 
 ul {
@@ -70,7 +75,7 @@ a {
 }
 
 .btn-white {
-  background-color: $secondary-color;
+  background-color: transparent;
   color: $primary-color;
 }
 

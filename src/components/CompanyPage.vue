@@ -9,29 +9,93 @@
         <p>
         <!-- eslint-disable-next-line -->
         We are leaders in providing consultancy services with a set of cutting-edge tecnologies and a team of experienced and renowed professionals. These are some options that you can hire.
-      </p>
-      <button class="btn btn-green">see all</button>
+        </p>
+        <button class="btn btn-green">see all</button>
+      </div>
+
+      <div class="card-container">
+        <ServicesCardPage
+        v-for="card in serviceCards"
+        :key= "card.title"
+        :card-icon= "card.icon"
+        :button= "card.button"
+        :title= "card.title"
+        :text= "card.text"
+        />
       </div>
     </div>
-
-    <div class="card-container">
-      <ServiceCardPage />
+    <div class="bullets">
+      <img src="@/assets/img/bullets.png" alt="">
     </div>
 
   </div>
   <div class="about-network">
 
+    <div class="container">
+      <div class="left-side">
+        <div class="intros">about the network</div>
+        <h2><span class="green">The</span> Company</h2>
+        <p>
+          <!-- eslint-disable-next-line -->
+          For 12 years we have been providing audit and warranty, financial advice, risk advice, taxes and related services to select clients.
+        </p>
+        <div class="company-cards-container">
+          <div class="company-cards">
+            <div class="company-card-title">
+              <font-awesome-icon icon="fa-medal" />
+              <h3>Tradition</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
+          <div class="company-cards">
+            <div class="company-card-title">
+              <font-awesome-icon icon="fa-lock" />
+              <h3>Security</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
+          <div class="company-cards">
+            <div class="company-card-title">
+              <font-awesome-icon icon="fa-pen-to-square" />
+              <h3>Certificate</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
+          <div class="company-cards">
+              <div class="company-card-title">
+              <font-awesome-icon icon="fa-graduation-cap" />
+              <h3>Expertise</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-green">get in touch</button>
+            <button class="btn btn-white">read more</button>
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <img src="@/assets/img/about-4.jpg" alt="">
+    </div>
+
+    <div class="bullets">
+      <img src="@/assets/img/bullets.png" alt="">
+    </div>
   </div>
 </div>
 </template>
 
 <script>
-import ServiceCardPage from '@/components/ServicesCardPage.vue';
+import ServicesCardPage from '@/components/ServicesCardPage.vue';
 
 export default {
   name: 'CompanyName',
   components: {
-    ServiceCardPage,
+    ServicesCardPage,
+  },
+  props: {
+    serviceCards: Array,
   },
 };
 </script>
@@ -40,7 +104,8 @@ export default {
 @import '@/assets/variables.scss';
 .services-outer {
   background-color: #eef1ed;
-  padding: 4rem 0;
+  padding: 6rem 0;
+  position: relative;
 }
 .container{
   flex-direction: column;
@@ -70,10 +135,65 @@ h2 {
 .services-description {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3rem;
 
     p{
       flex: 0 1 75%;
       color: $primary-text-color;
     }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  margin-bottom: 3rem;
+}
+
+.about-network {
+  display: flex;
+  position: relative;
+
+  background-color: #111117;
+
+    h2 {
+      color: $secondary-color;
+      span {
+        color: $secondary-color;
+      }
+    }
+
+    img {
+      height: 100%;
+    }
+}
+
+.bullets {
+  width: 100px;
+  height: 45px;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+
+  z-index: 10;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      opacity: 0.5;
+    }
+}
+
+.left-side {
+  width: 50%;
+
+  padding: 5rem 1.5rem 5rem 0;
 }
 </style>
