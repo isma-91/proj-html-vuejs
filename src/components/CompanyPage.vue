@@ -164,8 +164,21 @@ h2 {
       }
     }
 
-    img {
+    .right-side {
+      position:absolute;
+      top: 0;
+      right: 0;
+
       height: 100%;
+      width: 50%;
+
+      object-fit: cover;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
 }
 
@@ -194,6 +207,49 @@ h2 {
 .left-side {
   width: 50%;
 
-  padding: 5rem 1.5rem 5rem 0;
+  padding: 9rem 1.5rem 9rem 0;
+
+    h2{
+      font-size: 60px;
+      margin: 2rem 0;
+    }
+}
+
+.left-side p {
+  color: $primary-text-color;
+  font-size: 20px;
+}
+
+.company-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 5rem;
+  padding: 5rem 0;
+  font-size: 20px;
+}
+
+.company-cards {
+  width: calc((100% - 2rem ) / 2);
+}
+
+.company-card-title {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1rem;
+
+  color: $primary-color;
+
+  h3 {
+    color: $secondary-color;
+
+    margin-left: 1rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
 }
 </style>
