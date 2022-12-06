@@ -6,6 +6,8 @@
 <ProjectResultsPage
 :arrCardSelectors="arrCardSelectors"
 :arrProjectCards="arrProjectCards"
+:arrResults="arrResults"
+:arrSponsors="arrSponsors"
 />
 <FormPage />
 </main>
@@ -100,6 +102,50 @@ export default {
           type: 'social',
           title: 'Confraternization of the procurement team',
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing alit.',
+        },
+      ],
+      arrResults: [
+        {
+          title: 'Certifications',
+          total: 128,
+        },
+        {
+          title: 'Employees',
+          total: 230,
+        },
+        {
+          title: 'Customers',
+          total: 517,
+        },
+        {
+          title: 'Countries Served',
+          total: 94,
+        },
+      ],
+      arrSponsors: [
+        {
+          id: 1,
+          url: 'logo-4.png',
+        },
+        {
+          id: 2,
+          url: 'logo-5.png',
+        },
+        {
+          id: 3,
+          url: 'logo-1.png',
+        },
+        {
+          id: 4,
+          url: 'logo-2.png',
+        },
+        {
+          id: 5,
+          url: 'logo-3.png',
+        },
+        {
+          id: 6,
+          url: 'logo-4.png',
         },
       ],
     };
