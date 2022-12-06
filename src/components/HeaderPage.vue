@@ -1,6 +1,6 @@
 <template>
 <header>
-<div class="top-bar">
+<div id="start" class="top-bar">
   <div class="container">
     <div class="top-bar-left-side">
       <font-awesome-icon icon="fa-solid fa-clock" />

@@ -17,6 +17,8 @@ import {
   faPenToSquare,
   faGraduationCap,
   faLocationDot,
+  faAngleRight,
+  faArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -42,6 +44,8 @@ library.add(
   faPenToSquare,
   faGraduationCap,
   faLocationDot,
+  faAngleRight,
+  faArrowUp,
 );
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
