@@ -82,4 +82,29 @@ a {
 button:hover {
 cursor: pointer;
 }
+
+.intros{
+  width: 100%;
+
+  color: $third-color;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: $intros-font-size;
+
+  margin-bottom: 1.5rem;
+}
+
+.green {
+  background-color: rgba($color: $primary-color, $alpha: .3);
+  color: $primary-color;
+
+  padding: .1rem .8rem;
+  border-radius: 5px;
+}
+
+h2 {
+    width: 100%;
+    font-size: $h2-default-font-size;
+}
 </style>

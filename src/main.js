@@ -16,6 +16,7 @@ import {
   faLock,
   faPenToSquare,
   faGraduationCap,
+  faLocationDot,
 } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -40,6 +41,7 @@ library.add(
   faLock,
   faPenToSquare,
   faGraduationCap,
+  faLocationDot,
 );
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
