@@ -1,7 +1,12 @@
 <template>
 <main>
-<CompanyPage :serviceCards="arrCards"/>
-<ProjectResultsPage />
+<CompanyPage
+:serviceCards="arrCards"
+/>
+<ProjectResultsPage
+:arrCardSelectors="arrCardSelectors"
+:arrProjectCards="arrProjectCards"
+/>
 <FormPage />
 </main>
 </template>
@@ -56,6 +61,45 @@ export default {
           button: 'fa-arrow-right',
           title: 'Regulatory Risk',
           text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+        },
+      ],
+      arrCardSelectors: ['all', 'institutional', 'social', 'events', 'innovation', 'environment', 'technology'],
+      arrProjectCards: [
+        {
+          url: '@/assets/img/project-1.jpg',
+          type: 'innovation',
+          title: 'Academic professional program in social media',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing alit.',
+        },
+        {
+          url: '@/assets/img/project-2.jpg',
+          type: 'events',
+          title: 'President\'s speech at the annual meeting',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing alit.',
+        },
+        {
+          url: '@/assets/img/project-3.jpg',
+          type: 'environment',
+          title: 'International business trip in Shangai',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing alit.',
+        },
+        {
+          url: '@/assets/img/project-4.jpg',
+          type: 'technology',
+          title: 'Technology workshop with education theme',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing alit.',
+        },
+        {
+          url: '@/assets/img/project-5.jpg',
+          type: 'institutional',
+          title: 'Donation of clothes and food to the partner NGO',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing alit.',
+        },
+        {
+          url: '@/assets/img/project-6.jpg',
+          type: 'social',
+          title: 'Confraternization of the procurement team',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing alit.',
         },
       ],
     };
