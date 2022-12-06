@@ -115,13 +115,13 @@ export default {
 
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 12px;
+  font-size: $intros-font-size;
 
   margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 35px;
+  font-size: $h2-default-font-size;
   margin-bottom: 1.5rem;
 }
 .green {
@@ -158,7 +158,10 @@ h2 {
   background-color: #111117;
 
     h2 {
+      font-size: $h2-default-font-size;
       color: $secondary-color;
+
+      margin: 2rem 0;
       span {
         color: $secondary-color;
       }
@@ -208,10 +211,6 @@ h2 {
   width: 50%;
 
   padding: 8rem 1.5rem 8rem 0;
-
-    h2{
-      margin: 2rem 0;
-    }
 }
 
 .left-side p {

@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss">
 @import '@/assets/variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;600;700;800&display=swap');
 
 * {
   margin: 0;
