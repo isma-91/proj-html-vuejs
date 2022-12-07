@@ -110,26 +110,10 @@ export default {
 .container{
   flex-direction: column;
 }
-.intros{
-  color: $third-color;
-
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: $intros-font-size;
-
-  margin-bottom: 1.5rem;
-}
 
 h2 {
   font-size: $h2-default-font-size;
   margin-bottom: 1.5rem;
-}
-.green {
-  background-color: rgba($color: $primary-color, $alpha: .3);
-  color: $primary-color;
-
-  padding: .1rem .8rem;
-  border-radius: 5px;
 }
 
 .services-description {

@@ -137,13 +137,6 @@ li:last-child a {
 
     h1 {
       font-size: 60px;
-      .green {
-        background-color: rgba($color: $primary-color, $alpha: .3);
-        color: $primary-color;
-
-        padding: .1rem .8rem;
-        border-radius: 5px;
-      }
     }
     p {
       margin: 1.5rem 0;
