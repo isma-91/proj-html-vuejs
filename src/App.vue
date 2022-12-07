@@ -279,6 +279,9 @@ a {
   padding: .6rem 1.2rem;
   border-radius: 5px;
   border: 1px solid $primary-color;
+
+  font-weight: bold;
+  font-size: $p-default-font-size;
 }
 
 .btn:hover{

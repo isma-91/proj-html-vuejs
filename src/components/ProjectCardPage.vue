@@ -41,6 +41,7 @@ export default {
   position:relative;
   width: calc((100% - 2rem * 2) / 3);
   min-width: 370px;
+  flex: 0 1 auto;
 
   overflow: hidden;
     img {
