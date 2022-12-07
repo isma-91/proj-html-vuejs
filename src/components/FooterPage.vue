@@ -156,17 +156,19 @@ export default {
 
   .left {
     color: $third-color;
-    background-color: rgba($color: $primary-color, $alpha: .3);
-    padding: .6rem .3rem .6rem 2rem;
+    background-color: #0E272D;
+    padding: .6rem 0 .6rem 2.2rem;
+    margin-right: 5px;
 
     border-radius: 30px 0 0 30px;
 
-    margin-right: 5px;
+    letter-spacing: .3rem;
   }
 
   .right {
     padding-top: .6rem;
     color: #C0C2CD;
+    letter-spacing: .3rem;
   }
 }
 

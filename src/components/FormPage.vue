@@ -7,6 +7,7 @@
 
       <form @submit.prevent>
         <label class="form-container" for="form">
+          <img src="@/assets/img/image1.png" alt="form-name">
         <input class="simple" type="text" name="name" id="name" placeholder="Name" required>
         <input class="simple" type="email" name="mail" id="mail" placeholder="Email" required>
         <input class="simple" type="number" name="phone" id="phone" placeholder="Phone" required>
@@ -81,6 +82,14 @@ export default {
   gap: 1rem;
 
   margin: 3rem 0;
+
+  position: relative;
+
+    img {
+      position: absolute;
+      top: 15px;
+      left: 325px;
+    }
 }
 
 .simple {

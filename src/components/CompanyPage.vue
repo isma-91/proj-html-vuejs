@@ -1,36 +1,36 @@
 <template>
-<div class="company">
+<div>
+  <section class="company">
+    <div class="services-outer">
+      <div class="container">
+        <div class="intros">our business areas</div>
+        <h2>Excellence in <span class="green">Services</span></h2>
+        <div class="services-description">
+          <p>
+          <!-- eslint-disable-next-line -->
+          We are leaders in providing consultancy services with a set of cutting-edge tecnologies and a team of experienced and renowed professionals. These are some options that you can hire.
+          </p>
+          <button class="btn btn-green">see all</button>
+        </div>
 
-  <div class="services-outer">
-    <div class="container">
-      <div class="intros">our business areas</div>
-      <h2>Excellence in <span class="green">Services</span></h2>
-      <div class="services-description">
-        <p>
-        <!-- eslint-disable-next-line -->
-        We are leaders in providing consultancy services with a set of cutting-edge tecnologies and a team of experienced and renowed professionals. These are some options that you can hire.
-        </p>
-        <button class="btn btn-green">see all</button>
+        <div class="card-container">
+          <ServicesCardPage
+          v-for="card in serviceCards"
+          :key= "card.title"
+          :card-icon= "card.icon"
+          :button= "card.button"
+          :title= "card.title"
+          :text= "card.text"
+          />
+        </div>
       </div>
-
-      <div class="card-container">
-        <ServicesCardPage
-        v-for="card in serviceCards"
-        :key= "card.title"
-        :card-icon= "card.icon"
-        :button= "card.button"
-        :title= "card.title"
-        :text= "card.text"
-        />
+      <div class="bullets">
+        <img src="@/assets/img/bullets.png" alt="">
       </div>
     </div>
-    <div class="bullets">
-      <img src="@/assets/img/bullets.png" alt="">
-    </div>
+  </section>
 
-  </div>
-  <div class="about-network">
-
+  <section class="about-network">
     <div class="container">
       <div class="left-side">
         <div class="intros">about the network</div>
@@ -82,7 +82,7 @@
     <div class="bullets">
       <img src="@/assets/img/bullets.png" alt="">
     </div>
-  </div>
+  </section>
 </div>
 </template>
 

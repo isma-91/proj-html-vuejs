@@ -1,31 +1,31 @@
 <template>
 <header>
-<div id="start" class="top-bar">
-  <div class="container">
-    <div class="top-bar-left-side">
-      <font-awesome-icon icon="fa-solid fa-clock" />
-      <div class="timetables">Open Hours: Mon-Sat - 9:00-18:00</div>
-    </div>
-    <div class="top-bar-right-side">
-      <div class="telephone">
-        <font-awesome-icon icon="fa-solid fa-phone" />
-        +1(305) 1234 5678
+  <div id="start" class="top-bar">
+    <div class="container">
+      <div class="top-bar-left-side">
+        <font-awesome-icon icon="fa-solid fa-clock" />
+        <div class="timetables">Open Hours: Mon-Sat - 9:00-18:00</div>
       </div>
-      <div class="mail">
-        <font-awesome-icon icon="fa-solid fa-envelope" />
-        hello@example.com
-      </div>
-      <div class="socials">
-        <font-awesome-icon icon="fa-brands fa-facebook-f" />
-        <font-awesome-icon icon="fa-brands fa-twitter" />
-        <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+      <div class="top-bar-right-side">
+        <div class="telephone">
+          <font-awesome-icon icon="fa-solid fa-phone" />
+          +1(305) 1234 5678
+        </div>
+        <div class="mail">
+          <font-awesome-icon icon="fa-solid fa-envelope" />
+          hello@example.com
+        </div>
+        <div class="socials">
+          <font-awesome-icon icon="fa-brands fa-facebook-f" />
+          <font-awesome-icon icon="fa-brands fa-twitter" />
+          <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="bottom-bar">
-  <NavPage :top-nav="arrMenuHeader"/>
-</div>
+  <div class="bottom-bar">
+    <NavPage :top-nav="arrMenuHeader"/>
+  </div>
 </header>
 </template>
 

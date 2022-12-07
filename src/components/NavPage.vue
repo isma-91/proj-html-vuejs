@@ -1,34 +1,37 @@
 <template>
-  <div class="header-bottom">
-    <nav class="container">
-      <div class="logo">
-        <img src="@/assets/img/logo.png" alt="logo">
-      </div>
-      <div class="nav-menu">
-        <ul>
-          <li  v-for="menu in topNav"
-          :key="menu"
-          >
-            <a href="!">{{ menu }}</a>
-          </li>
-          <!-- Lultima voce "Get in touch" è un bottone? come la si fa? -->
-        </ul>
-      </div>
-    </nav>
-    <div class="introduction">
-      <div class="page-details">
-        <h1>Ready <span class="green">Team</span> </h1>
-        <p>
-        No matter what your company needs, we will be ready to assist you in the best possible way.
-        </p>
-        <div class="buttons">
-          <button class="btn btn-green">get in touch</button>
-          <button class="btn btn-white">read more</button>
+  <div class="header-bottom-container">
+    <div class="header-bottom">
+      <nav class="container">
+        <div class="logo">
+          <img src="@/assets/img/logo.png" alt="logo">
         </div>
-        <div class="selectors">
-          <div class="circle"></div>
-          <div class="circle full"></div>
-          <div class="circle"></div>
+        <div class="nav-menu">
+          <ul>
+            <li  v-for="menu in topNav"
+            :key="menu"
+            >
+              <a href="!">{{ menu }}</a>
+            </li>
+            <!-- Lultima voce "Get in touch" è un bottone? come la si fa? -->
+          </ul>
+        </div>
+      </nav>
+      <div class="introduction">
+        <div class="page-details">
+          <h1>Ready <span class="green">Team</span> </h1>
+          <p>
+          No matter what your company needs,
+          we will be ready to assist you in the best possible way.
+          </p>
+          <div class="buttons">
+            <button class="btn btn-green">get in touch</button>
+            <button class="btn btn-white">read more</button>
+          </div>
+          <div class="selectors">
+            <div class="circle"></div>
+            <div class="circle full"></div>
+            <div class="circle"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -86,6 +89,12 @@ li:last-child a {
   color: $secondary-color;
   background-color: $primary-color;
   border-radius: 5px;
+}
+
+.header-bottom-container{
+  background-image: url('@/assets/img/prova.jpg');
+  background-size: cover;
+
 }
 
 // Mettiamo la background image
