@@ -8,7 +8,7 @@
           v-for="string, index in arrCardSelectors"
           :key="index"
           :class="{ 'selected': index === activeIndex }"
-          @click="((activeIndex = index), getValue(string))"
+          @click="((activeIndex = index), filterCards(string))"
           @keydown="(activeIndex = index)"
           >
           {{ string }}
@@ -76,7 +76,7 @@ export default {
     };
   },
   methods: {
-    getValue(string) {
+    filterCards(string) {
       this.arrProjectCards.forEach((e) => {
         // console.log(e.type + string);
         if (e.type === string || string === 'all') {
