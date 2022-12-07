@@ -4,7 +4,9 @@
   <div class="container">
     <div class="left-side">
       <div class="logo">
-        <img src="@/assets/img/logo.png" alt="logo">
+        <div class="left">NEX</div>
+        <div class="right">GEN</div>
+        <!-- <img src="@/assets/img/logo.png" alt="logo"> -->
       </div>
       <p>A Functional HTML Template for Corporate & Business</p>
 
@@ -138,13 +140,34 @@ export default {
       margin-bottom: 1.5rem;
     }
 
-    img {
-      max-width: 50%;
-    }
+    // img {
+    //   max-width: 50%;
+    // }
 
     button {
       color: $secondary-color;
     }
+}
+
+.logo {
+  display: flex;
+  font-size: 30px;
+  font-weight: 600;
+
+  .left {
+    color: $third-color;
+    background-color: rgba($color: $primary-color, $alpha: .3);
+    padding: .6rem .3rem .6rem 2rem;
+
+    border-radius: 30px 0 0 30px;
+
+    margin-right: 5px;
+  }
+
+  .right {
+    padding-top: .6rem;
+    color: #C0C2CD;
+  }
 }
 
 .right-side{
