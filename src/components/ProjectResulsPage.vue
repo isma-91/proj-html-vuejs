@@ -1,61 +1,62 @@
 <template>
-<section class="projects">
-  <div class="container">
-    <div class="intros">we do more for everyone</div>
-    <h2>Actions & <span class="green">Projects</span></h2>
-      <ul class="card-selectors">
-        <li
-          v-for="string, index in arrCardSelectors"
-          :key="index"
-          :class="{ 'selected': index === activeIndex }"
-          @click="(activeIndex = index), selectType(string)"
-          @keydown="(activeIndex = index)"
-          >
-          {{ string }}
-        </li>
-      </ul>
-
-      <ul class="project-cards-container">
-        <ProjectCardPage
-        v-for="objCard in arrCardsFiltered"
-        :key="objCard.title"
-        :card="objCard"
-        :class="{hidden: objCard.visible === false}"
-      />
-      </ul>
-  </div>
-  <!-- Può una section stare dentro un altra section? -->
-  <section class="results">
+  <div>
+  <section class="projects">
     <div class="container">
       <div class="intros">we do more for everyone</div>
-      <h2><span class="green">Results</span> in Numbers</h2>
-      <div class="results-outer">
-        <ul
-        v-for="result in arrResults"
-        :key="result.total">
-          <li class="total-number">
-            {{ result.total }}
-          </li>
-          <li class="category">
-            {{ result.title }}
+      <h2>Actions & <span class="green">Projects</span></h2>
+        <ul class="card-selectors">
+          <li
+            v-for="string, index in arrCardSelectors"
+            :key="index"
+            :class="{ 'selected': index === activeIndex }"
+            @click="(activeIndex = index), selectType(string)"
+            @keydown="(activeIndex = index)"
+            >
+            {{ string }}
           </li>
         </ul>
-      </div>
+
+        <ul class="project-cards-container">
+          <ProjectCardPage
+          v-for="objCard in arrCardsFiltered"
+          :key="objCard.title"
+          :card="objCard"
+        />
+        </ul>
     </div>
+    <!-- Può una section stare dentro un altra section? -->
   </section>
-  <section class="sponsor">
-    <ul class="container">
-      <li
-      v-for="sponsor in arrSponsors"
-      :key="sponsor.id">
-    <img :src="require(`@/assets/img/${sponsor.url}`)" alt="">
-    </li>
-    </ul>
-  </section>
-</section>
+
+  <section class="results">
+      <div class="container">
+        <div class="intros">we do more for everyone</div>
+        <h2><span class="green">Results</span> in Numbers</h2>
+        <div class="results-outer">
+          <ul
+          v-for="result in arrResults"
+          :key="result.total">
+            <li class="total-number">
+              {{ result.total }}
+            </li>
+            <li class="category">
+              {{ result.title }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="sponsor">
+      <ul class="container">
+        <li
+        v-for="sponsor in arrSponsors"
+        :key="sponsor.id">
+      <img :src="require(`@/assets/img/${sponsor.url}`)" alt="">
+      </li>
+      </ul>
+    </section>
+</div>
 </template>
 
-// TODO: Cercare di fare il "Filtro" per le cards
 <script>
 import ProjectCardPage from '@/components/ProjectCardPage.vue';
 
@@ -92,6 +93,8 @@ export default {
     // },
   },
   computed: {
+    // eslint-disable-next-line
+    // Ricordarsi che le computed properties sono simili alle funzioni, DEVONO ritornare un valore e si possono usare come variabili. Quindi in questo caso abbiamo preso l'aray delle nostre cards, se il valore base di "string" (variabile che abbiamo creato noi per dargli una base, ma che poi andremo a modificare noi in base a cosa selezioniamo sulla pagina tramite un altra funzione) è "all" allora ritorna l'array originale e verranno visualizzate, in questo caso, tutte le cards. Altrimenti se il valore di "string" è diverso da "all" l'array originale verrà "filtrato" e, in questo caso, verranno visualizzate solo le cards il cui attributo .type è uguale alla "string". L'array filtrato viene salvato automaticamente nella funzione che essendo computed e quindi potendola usare come variabile la useremo per fare il nostro ciclo v-for nell'HTML al posto dell'array originale, dato che può restituirci entrambi.
     arrCardsFiltered() {
       if (this.string === 'all') {
         return this.arrProjectCards;
