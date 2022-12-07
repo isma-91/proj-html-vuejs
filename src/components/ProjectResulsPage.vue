@@ -8,7 +8,7 @@
           v-for="string, index in arrCardSelectors"
           :key="index"
           :class="{ 'selected': index === activeIndex }"
-          @click="((activeIndex = index), filterCards(string))"
+          @click="(activeIndex = index), selectType(string)"
           @keydown="(activeIndex = index)"
           >
           {{ string }}
@@ -17,7 +17,7 @@
 
       <ul class="project-cards-container">
         <ProjectCardPage
-        v-for="objCard in arrProjectCards"
+        v-for="objCard in arrCardsFiltered"
         :key="objCard.title"
         :card="objCard"
         :class="{hidden: objCard.visible === false}"
@@ -73,32 +73,43 @@ export default {
   data() {
     return {
       activeIndex: 0,
+      string: 'all',
     };
   },
   methods: {
-    filterCards(string) {
-      this.arrProjectCards.forEach((e) => {
-        // console.log(e.type + string);
-        if (e.type === string || string === 'all') {
-          e.visible = true;
-        } else {
-          e.visible = false;
-        }
-      });
+    selectType(string) {
+      this.string = string;
     },
-
+    // filterCards(string) {
+    //   this.arrProjectCards.forEach((e) => {
+    //     // console.log(e.type + string);
+    //     if (e.type === string || string === 'all') {
+    //       e.visible = true;
+    //     } else {
+    //       e.visible = false;
+    //     }
+    //   });
+    // },
+  },
+  computed: {
+    arrCardsFiltered() {
+      if (this.string === 'all') {
+        return this.arrProjectCards;
+      }
+      return this.arrProjectCards.filter((objCard) => objCard.type === this.string);
+    },
   },
   // created() {
-  //   console.log(this.arrProjectCards[1].type);
+  //   console.log(this.arrProjectCards.filter((objCard) => objCard.type === 'string'));
   // },
   // computed: {
   //   filteredCards() {
   //     return this.arrProjectCards.filter((objCard));
   //   },
   // },
-  // created() {
-  //   console.log(this.arrProjectCards);
-  // },
+  created() {
+    console.log(this.arrProjectCards);
+  },
 };
 </script>
 
