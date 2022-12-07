@@ -25,12 +25,12 @@ export default {
     return {
     };
   },
-  methods: {
-    getImage(url) {
-      console.log(this.imgUrlPrefix + url);
-      return this.imgUrlPrefix + url;
-    },
-  },
+  // methods: {
+  //   getImage(url) {
+  //     console.log(this.imgUrlPrefix + url);
+  //     return this.imgUrlPrefix + url;
+  //   },
+  // },
 
 };
 </script>
@@ -40,6 +40,7 @@ export default {
 .card{
   position:relative;
   width: calc((100% - 2rem * 2) / 3);
+  min-width: 370px;
 
   overflow: hidden;
     img {

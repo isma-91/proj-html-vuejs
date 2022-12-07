@@ -8,7 +8,7 @@
           v-for="string, index in arrCardSelectors"
           :key="index"
           :class="{ 'selected': index === activeIndex }"
-          @click="(activeIndex = index)"
+          @click="((activeIndex = index), getValue(string))"
           @keydown="(activeIndex = index)"
           >
           {{ string }}
@@ -18,8 +18,9 @@
       <ul class="project-cards-container">
         <ProjectCardPage
         v-for="objCard in arrProjectCards"
-        :key="objCard.titolo"
+        :key="objCard.title"
         :card="objCard"
+        :class="{hidden: objCard.visible === false}"
       />
       </ul>
   </div>
@@ -75,7 +76,21 @@ export default {
     };
   },
   methods: {
+    getValue(string) {
+      this.arrProjectCards.forEach((e) => {
+        // console.log(e.type + string);
+        if (e.type === string || string === 'all') {
+          e.visible = true;
+        } else {
+          e.visible = false;
+        }
+      });
+    },
+
   },
+  // created() {
+  //   console.log(this.arrProjectCards[1].type);
+  // },
   // computed: {
   //   filteredCards() {
   //     return this.arrProjectCards.filter((objCard));
@@ -131,6 +146,7 @@ h2 {
 .project-cards-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   gap: 2rem;
 }

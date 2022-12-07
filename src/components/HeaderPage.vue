@@ -39,8 +39,11 @@ export default {
   },
   data() {
     return {
-      arrMenuHeader: ['home', 'services', 'about', 'projects', 'results', 'get in touch'],
+
     };
+  },
+  props: {
+    arrMenuHeader: Array,
   },
   // created() {
   //   console.log(this.arrMenuHeader);

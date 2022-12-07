@@ -4,7 +4,7 @@
   <div class="container">
     <div class="left-side">
       <div class="logo">
-        <img src="@/assets/img/logo.png" alt="">
+        <img src="@/assets/img/logo.png" alt="logo">
       </div>
       <p>A Functional HTML Template for Corporate & Business</p>
 
