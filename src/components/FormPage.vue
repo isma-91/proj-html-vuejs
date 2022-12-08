@@ -93,6 +93,7 @@ export default {
 }
 
 .simple {
+  font-family: 'Alexandria', sans-serif;
   width: calc((100% - 1rem ) /2);
   font-size: 20px;
   padding: .7rem;
@@ -101,6 +102,7 @@ export default {
   background-color: #ECECEC;
 }
 .large {
+  font-family: 'Alexandria', sans-serif;
   width: 100%;
   font-size: 20px;
   padding: .7rem;
